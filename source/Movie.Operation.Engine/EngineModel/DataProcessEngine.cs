@@ -96,7 +96,8 @@
                 ReleasedDate = movieDetail.ReleasedDate,
                 Plot = movieDetail.Plot,
                 Producers = producersNames,
-                Actors = actorsNames
+                Actors = actorsNames,
+                Poster = movieDetail.Poster,
             };
             var isMovieAdded = await _dataProcessRepository.UpdateMovie(movieId, movie).ConfigureAwait(false);
             if (isMovieAdded)
